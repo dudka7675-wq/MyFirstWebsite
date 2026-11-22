@@ -12,23 +12,41 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">WebDev<span>.</span></a>
+            <button id="menu-toggle" class="menu-toggle">
+
+            </button>
+
             <ul class="nav-links">
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#skills">Навыки</a></li>
                 <li><a href="#projects">Проекты</a></li>
+                <li><a href="#achievements">Достижения</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
-        </div>
-    </nav>
+            
+                
+<button id="theme-toggle" class="theme-button">
+    🌙 Тёмная тема
+</button>
+            </div>
+        </nav>
 
     <!-- Главный экран (Hero Section) -->
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <h1>Привет, я начинающий <span class="highlight">веб-разработчик</span></h1>
-            <p>Создаю современные, быстрые и красивые сайты. Изучаю HTML, CSS и JavaScript.</p>
-            <a href="#projects" class="btn-primary">Посмотреть мои работы</a>
-        </div>
-    </header>
+    
+<header class="hero" id="home">
+    <div class="hero-content">
+        <h1>Привет! Я <span class="highlight">Виктор</span></h1>
+
+        <h2 class="animated-text">
+            Я <span id="typing-text"></span><span class="cursor">|</span>
+        </h2>
+
+        <p>Создаю современные, быстрые и красивые сайты. Изучаю HTML, CSS и JavaScript.</p>
+
+        <a href="#projects" class="btn-primary">Посмотреть мои работы</a>
+    </div>
+</header>
+
 
     <main>
         <!-- Блок "Обо мне" -->
@@ -75,15 +93,106 @@
             </div>
         </section>
 
-        <!-- Блок: Контакты -->
-        <section id="contacts" class="section bg-darker">
-            <h2 class="section-title">Связаться со мной</h2>
-            <p class="section-subtitle">Я всегда открыт к новым знаниям и проектам!</p>
-            <div class="contact-links">
-                <a href="https://github.com" target="_blank" class="btn-outline">🐙 Мой GitHub</a>
-                <a href="mailto:myemail@example.com" class="btn-outline">✉️ Написать мне</a>
-            </div>
-        </section>
+<!-- Мои достижения -->
+<section id="achievements" class="section">
+    <h2 class="section-title">Мои достижения 🏆</h2>
+    <p class="section-subtitle">
+    Мой путь в мире веб-разработки
+</p>
+
+<div class="projects-grid" id="achievements-list">
+</div>
+
+        <div class="project-card">
+            <div class="project-icon">💻</div>
+            <h3>HTML и CSS</h3>
+            <p>Научился создавать структуру сайтов и оформлять их.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Добавил интерактивность и анимации на свой сайт.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Мои результаты -->
+<section class="section bg-darker" id="stats">
+    <h2 class="section-title">Мои результаты 📊</h2>
+    <p class="section-subtitle">
+        Маленькие шаги к большим достижениям
+    </p>
+
+    <div class="projects-grid stats-grid">
+
+        <div class="project-card stat-card">
+            <h3 class="counter" data-target="1">0</h3>
+            <p>Опубликованный сайт</p>
+        </div>
+
+        <div class="project-card stat-card">
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Изучаемые технологии</p>
+        </div>
+
+        <div class="project-card stat-card">
+            <h3 class="counter" data-target="4">0</h3>
+            <p>Навыка и инструмента</p>
+        </div>
+
+    </div>
+</section>
+
+       
+<!-- Блок: Контакты -->
+<section id="contacts" class="section bg-darker">
+    <h2 class="section-title">Связаться со мной ✉️</h2>
+
+    <p class="section-subtitle">
+        Есть вопросы или предложения? Напиши мне!
+    </p>
+
+    <form
+        action="https://formspree.io/f/xgaknykq"
+        method="POST"
+        class="contact-form"
+    >
+        <input
+            type="text"
+            name="name"
+            placeholder="Твоё имя"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Твоя электронная почта"
+            required
+        >
+
+        <textarea
+            name="message"
+            placeholder="Напиши своё сообщение..."
+            rows="6"
+            required
+        ></textarea>
+
+        <button type="submit" class="btn-primary">
+            Отправить сообщение 🚀
+        </button>
+    </form>
+
+<div id="form-success" class="form-message">
+    <div class="success-icon">✓</div>
+    <h3>Сообщение отправлено!</h3>
+    <p>Спасибо за обращение! 💜</p>
+</div>
+
+</section>
+
     </main>
 
     <footer>
@@ -95,6 +204,16 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+<canvas id="particles"></canvas>
+<div class="mouse-glow"></div>
+
+<script src="script.js"></script>
 </body>
+
+<div id="loader">
+    <h1>WELCOME<span>.</span></h1>
+    <div class="loader-circle"></div>
+    <p>Загружаем мой сайт...</p>
+</div>
+
 </html>

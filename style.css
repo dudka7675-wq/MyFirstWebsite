@@ -1,0 +1,350 @@
+/* =========================================
+   СБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Отступ, чтобы меню не перекрывало заголовки */
+}
+
+body {
+    background-color: #0f172a; /* Глубокий темно-синий */
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   НАВИГАЦИЯ (ЛИПКАЯ ШАПКА)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #4da3ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #4da3ff;
+}
+
+/* =========================================
+   ГЛАВНЫЙ ЭКРАН (HERO)
+   ========================================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 100%);
+    padding: 100px 20px 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.highlight {
+    background: linear-gradient(90deg, #4da3ff, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #4da3ff;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2b7cdb;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   ОБЩИЕ СТИЛИ ДЛЯ СЕКЦИЙ
+   ========================================= */
+.section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bg-darker {
+    max-width: 100%;
+    background-color: #0b1120;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   НАВЫКИ
+   ========================================= */
+.skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-list li {
+    background-color: #1e293b;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    border-color: #4da3ff;
+    box-shadow: 0 10px 20px rgba(77, 163, 255, 0.1);
+}
+
+/* =========================================
+   ПРОЕКТЫ (КАРТОЧКИ)
+   ========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #a855f7;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(168, 85, 247, 0.2);
+    color: #c084fc;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* =========================================
+   КНОПКИ И ССЫЛКИ
+   ========================================= */
+.btn-secondary {
+    background-color: transparent;
+    color: #4da3ff;
+    border: 2px solid #4da3ff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #4da3ff;
+    color: #fff;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    text-decoration: none;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline:hover {
+    background-color: #334155;
+    border-color: #4da3ff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   ПОДВАЛ
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #020617;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+}
+
+.footer-socials {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #4da3ff;
+}
+
+/* =========================================
+   АНИМАЦИИ (FADE-IN)
+   ========================================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   АДАПТИВНОСТЬ (ДЛЯ ТЕЛЕФОНОВ)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-links {
+        display: none; /* Скрываем меню на телефонах для простоты */
+    }
+    
+    .section {
+        padding: 60px 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
